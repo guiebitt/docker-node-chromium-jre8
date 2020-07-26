@@ -22,3 +22,8 @@ RUN set -x \
     && chromium-browser --version \
     && /usr/bin/chromedriver --version \
     && java -version
+
+WORKDIR /sources
+
+# npm run <your package script command>
+ENTRYPOINT [ "npm",  "run" ]
